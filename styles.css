@@ -52,7 +52,7 @@ form {
   display: flex;
   justify-content: center;
   align-content: center;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 
 }
 
@@ -61,27 +61,31 @@ form {
   padding: 10px;
   border: 1px solid #eee;
   outline: none;
-  width: 65%;
+  width: 63%;
   border-radius: 10px;
+  margin-left: 11px;
   
 }
 
 .inputForm::placeholder {
   padding: 0px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .btnCreate {
-  padding: 10px 30px;
+  width: 25%;
+  padding-top: 11px;
+  padding-bottom: 11px;
   background-color: rgb(250, 188, 0);
   border: none;
   color: #fff;
   border-radius: 10px;
   cursor: pointer;
   font-size: 15px;
+  margin-right: 15px;
 }
 .btnCreate:hover{
-  transform: scale(1.015);
+  transform: scale(1.055);
   transition: 0.5s all;
 }
 
