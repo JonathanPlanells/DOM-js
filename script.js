@@ -37,8 +37,16 @@ const creatTask = (evento) => {
     evento.preventDefault();
     const input = document.querySelector("[data-form-input]");
     const value = input.value
+    const task = document.querySelector("[data-task]")
     input.value = ""
-    console.log(value)
+    const content = ` 
+    <div>
+        <i class="far fa-check-square icon"></i>
+        <span class="task">${value}</span>
+    </div>
+    <i class="fas fa-trash-alt trashIcon icon"></i>`
+    task.innerHTML = content;
+    console.log(content)
 }
 
 btn.addEventListener('click', creatTask)
