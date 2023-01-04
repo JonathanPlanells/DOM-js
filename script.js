@@ -36,7 +36,9 @@ const btn = document.querySelector("[data-form-btn]")
 const creatTask = (evento) => {
     evento.preventDefault();
     const input = document.querySelector("[data-form-input]");
-    console.log(input.value);
+    const value = input.value
+    input.value = ""
+    console.log(value)
 }
 
 btn.addEventListener('click', creatTask)
