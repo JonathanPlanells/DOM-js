@@ -33,20 +33,30 @@
 
 const btn = document.querySelector("[data-form-btn]")
 
+
 const creatTask = (evento) => {
     evento.preventDefault();
-    const input = document.querySelector("[data-form-input]");
-    const value = input.value
-    const task = document.querySelector("[data-task]")
-    input.value = ""
-    const content = ` 
-    <div>
-        <i class="far fa-check-square icon"></i>
-        <span class="task">${value}</span>
-    </div>
-    <i class="fas fa-trash-alt trashIcon icon"></i>`
-    task.innerHTML = content;
-    console.log(content)
+    const entradaTexto = document.querySelector("[data-form-input]"); // Obtenemos todo el input
+    const valor = entradaTexto.value // obtenemos el texto ingresdo en el input
+    const lista = document.querySelector("[data-list]") // Obtenemos el espacio donde se ubica la lista
+    const tareaNueva = document.createElement("li") // Se crea el elemento <li> para hacer cada card
+    tareaNueva.classList.add("card") // Se agrega clase al elemento <li>
+    entradaTexto.value = ""
+    const contenidoNuevo = ` 
+        <div>
+            <i class="far fa-check-square icon"></i>
+            <span class="task">${valor}</span>
+        </div>
+        <i class="fas fa-trash-alt trashIcon icon"></i>`
+
+    tareaNueva.innerHTML = contenidoNuevo; // Se agrega el contenido para cada card
+
+    lista.appendChild(tareaNueva) // Se crea el hijo para ir agregando varias cards
+
+    console.log(contenidoNuevo)
 }
 
 btn.addEventListener('click', creatTask)
+
+
+
